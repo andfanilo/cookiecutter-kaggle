@@ -1,0 +1,22 @@
+name: {{ cookiecutter.project_slug }}
+channels:
+- anaconda
+- conda-forge
+- defaults
+dependencies:
+- click
+- invoke
+- jupyter
+- jupyterlab
+- matplotlib
+- numpy
+- pandas
+- pandas-profiling
+- path.py
+- python=3
+- scikit-learn
+- seaborn
+- pip:
+  - h2o
+  - kaggle
+  - pyspark

@@ -1,0 +1,8 @@
+{
+	"full_name": "ANDRIANASOLO Fanilo",
+	"email": "andfanilo@gmail.com",
+	"project_name": "Kaggle project Boilerplate",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_short_description": "Python Boilerplate contains all the boilerplate you need to participate in a Kaggle competition",
+    "version": "0.1.0"
+}

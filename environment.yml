@@ -1,0 +1,8 @@
+# conda env create -f environment.yml
+name: cookiecutter-kaggle
+channels:
+- anaconda
+- conda-forge
+- defaults
+dependencies:
+- cookiecutter
