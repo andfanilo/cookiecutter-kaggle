@@ -4,19 +4,21 @@
 
 ## Prerequisites
 
-* [Anaconda](https://www.anaconda.com/download/) >=5.x
+- [Anaconda](https://www.anaconda.com/download/) >=5.x
 
 ## API credentials
 
 To use the Kaggle API, sign up for a Kaggle account at https://www.kaggle.com. Then go to the 'Account' tab of your user profile (`https://www.kaggle.com/<username>/account`) and select 'Create API Token'. This will trigger the download of `kaggle.json`, a file containing your API credentials. Place this file in the location `~/.kaggle/kaggle.json` (on Windows in the location `C:\Users\<Windows-username>\.kaggle\kaggle.json`).
 
-For your security, ensure that other users of your computer do not have read access to your credentials. On Unix-based systems you can do this with the following command: 
+For your security, ensure that other users of your computer do not have read access to your credentials. On Unix-based systems you can do this with the following command:
 
 `chmod 600 ~/.kaggle/kaggle.json`
 
 # Installation guide
 
-Using conda: 
+## Set up conda environment
+
+Using conda:
 
 ```
 conda env create -f environment.yml
@@ -26,6 +28,28 @@ activate {{ cookiecutter.project_slug }}
 The packages necessary to run the project are now installed inside the conda environment.
 
 **Note: The following sections assume you are located in your conda environment.**
+
+## Set up project's module
+
+To move beyond notebook prototyping, all reusable code should go into the `src/` folder package. To use that package inside your project, install the project's module in editable mode, so you can edit files in the `src/` folder and use the modules inside your notebooks :
+
+```
+pip install --editable .
+```
+
+To use the module inside your notebooks, add `%autoreload` at the top of your notebook :
+
+```
+%load_ext autoreload
+%autoreload 2
+```
+
+Example of module usage :
+
+```py
+from src.data.make_dataset import generate
+generate(10)
+```
 
 # Invoke command
 
@@ -62,7 +86,6 @@ _PS : we don't use Makefile because some people work on Windows workstations and
 install of make is cumbersome on those._
 
 # Project organization
-
 
     ├── tasks.py           <- Invoke with commands like `notebook`
     ├── README.md          <- The top-level README for developers using this project.
@@ -101,4 +124,3 @@ install of make is cumbersome on those._
         │
         └── visualization  <- Scripts to create exploratory and results oriented visualizations
             └── visualize.py
-
