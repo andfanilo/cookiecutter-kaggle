@@ -51,6 +51,33 @@ from src.data.make_dataset import generate
 generate(10)
 ```
 
+## Set up Git diff for notebooks
+
+We use [nbdime](https://nbdime.readthedocs.io/en/stable/index.html) for diffing and merging Jupyter notebooks.
+
+To configure it to this git project :
+
+```
+nbdime config-git --enable
+```
+
+To enable notebook extension :
+
+```
+nbdime extensions --enable --sys-prefix
+```
+
+Or, if you prefer full control, you can run the individual steps:
+
+```
+jupyter serverextension enable --py nbdime --sys-prefix
+
+jupyter nbextension install --py nbdime --sys-prefix
+jupyter nbextension enable --py nbdime --sys-prefix
+
+jupyter labextension install nbdime-jupyterlab
+```
+
 # Invoke command
 
 We use [Invoke](http://www.pyinvoke.org/) to manage an

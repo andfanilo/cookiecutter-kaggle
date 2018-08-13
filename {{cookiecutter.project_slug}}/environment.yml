@@ -21,4 +21,5 @@ dependencies:
   - kaggle
   - keras
   - lightgbm
+  - nbdime
   - pyspark
