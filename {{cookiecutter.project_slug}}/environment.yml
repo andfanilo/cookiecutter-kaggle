@@ -4,7 +4,6 @@ channels:
 - conda-forge
 - defaults
 dependencies:
-- click
 - invoke
 - jupyter
 - jupyterlab
@@ -16,7 +15,10 @@ dependencies:
 - python=3
 - scikit-learn
 - seaborn
+- statsmodels
 - pip:
   - h2o
   - kaggle
+  - keras
+  - lightgbm
   - pyspark
