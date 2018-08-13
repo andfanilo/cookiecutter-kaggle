@@ -151,3 +151,5 @@ install of make is cumbersome on those._
         │
         └── visualization  <- Scripts to create exploratory and results oriented visualizations
             └── visualize.py
+
+Project based on the [cookiecutter Kaggle template project](https://github.com/andfanilo/cookiecutter-kaggle). #cookiecutterdatascience
