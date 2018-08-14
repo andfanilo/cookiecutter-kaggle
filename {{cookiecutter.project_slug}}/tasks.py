@@ -14,6 +14,18 @@ def lab(ctx, ip='*', port=8888):
 
 
 @task(help={
+    'ip': 'IP to listen on, defaults to *',
+    'extra': 'Port to listen on, defaults to 8888',
+})
+def notebook(ctx, ip='*', port=8888):
+    """
+    Launch Jupyter notebook
+    """
+    cmd = ['jupyter notebook', '--ip={}'.format(ip), '--port={}'.format(port)]
+    ctx.run(' '.join(cmd))
+
+
+@task(help={
     'search': 'search term'
 })
 def competition_list(ctx, search=None):

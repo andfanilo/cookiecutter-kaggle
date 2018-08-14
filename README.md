@@ -4,7 +4,7 @@ This is a template cookiecutter project for bootstrapping your work on Kaggle co
 
 * a directory structure for sorting your notebooks, data, models, figures, tasks and source code to reuse in notebooks
 * a conda environment file with the basic python libraries and some extras :
-    * numpy / pandas / scikit-learn / seaborn / statsmodels / jupyterlab classic Data Science stack
+    * numpy / pandas / scikit-learn / seaborn / statsmodels / plotly / jupyterlab classic Data Science stack
     * [keras](https://keras.io/) and [lightgbm](https://lightgbm.readthedocs.io/en/latest/) for prediction
     * [pyspark](https://spark.apache.org/) and [h2o](https://www.h2o.ai/) for distributed processing
     * [pandas-profiling](https://github.com/pandas-profiling/pandas-profiling) for generating HTML reports on pandas dataframes

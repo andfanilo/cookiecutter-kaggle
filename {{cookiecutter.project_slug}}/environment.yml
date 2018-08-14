@@ -22,4 +22,5 @@ dependencies:
   - keras
   - lightgbm
   - nbdime
+  - plotly
   - pyspark

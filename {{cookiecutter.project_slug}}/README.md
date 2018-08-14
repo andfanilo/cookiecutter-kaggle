@@ -51,7 +51,7 @@ from src.data.make_dataset import generate
 generate(10)
 ```
 
-## Set up Git diff for notebooks
+## Set up Git diff for notebooks and lab
 
 We use [nbdime](https://nbdime.readthedocs.io/en/stable/index.html) for diffing and merging Jupyter notebooks.
 
@@ -76,6 +76,25 @@ jupyter nbextension install --py nbdime --sys-prefix
 jupyter nbextension enable --py nbdime --sys-prefix
 
 jupyter labextension install nbdime-jupyterlab
+```
+
+You may need to rebuild the extension : `jupyter lab build`
+
+## Set up Plotly for Jupyterlab
+
+Plotly works in notebook but further steps are needed for it to work in Jupyterlab :
+
+* @jupyter-widgets/jupyterlab-manager # Jupyter widgets support
+* plotlywidget  # FigureWidget support
+* @jupyterlab/plotly-extension  # offline iplot support
+
+There are conflict versions between those extensions so check the [latest Plotly README](https://github.com/plotly/plotly.py#installation-of-plotlypy-version-3) to ensure you fetch the correct ones. 
+
+```
+jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.36 --no-build
+jupyter labextension install plotlywidget@0.2.1  --no-build
+jupyter labextension install @jupyterlab/plotly-extension@0.16  --no-build
+jupyter lab build
 ```
 
 # Invoke command
