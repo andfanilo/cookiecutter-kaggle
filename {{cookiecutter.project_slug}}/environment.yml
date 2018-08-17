@@ -12,7 +12,7 @@ dependencies:
 - pandas
 - pandas-profiling
 - path.py
-- python=3
+- python=3.6
 - scikit-learn
 - seaborn
 - statsmodels
@@ -24,3 +24,4 @@ dependencies:
   - nbdime
   - plotly
   - pyspark
+  - tensorflow
