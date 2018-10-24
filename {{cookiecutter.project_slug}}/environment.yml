@@ -1,27 +1,30 @@
-name: {{ cookiecutter.project_slug }}
+name: { { cookiecutter.project_slug } }
 channels:
-- anaconda
-- conda-forge
-- defaults
+  - anaconda
+  - conda-forge
+  - defaults
 dependencies:
-- invoke
-- jupyter
-- jupyterlab
-- matplotlib
-- numpy
-- pandas
-- pandas-profiling
-- path.py
-- python=3.6
-- scikit-learn
-- seaborn
-- statsmodels
-- pip:
-  - h2o
-  - kaggle
-  - keras
-  - lightgbm
-  - nbdime
-  - plotly
-  - pyspark
-  - tensorflow
+  - invoke
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - pandas
+  - pandas-profiling
+  - path.py
+  - python=3.6
+  - scikit-learn
+  - seaborn
+  - statsmodels
+  - pip:
+      - black
+      - h2o
+      - kaggle
+      - keras
+      - lightgbm
+      - missingno
+      - nbdime
+      - plotly
+      - pylint
+      - pyspark
+      - tensorflow
